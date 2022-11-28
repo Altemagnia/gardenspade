@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* Color */
+
+html {
+	background-color: rgb(5, 126, 206);
+}
+
+
+
+
+
+/* Grid */
+body {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-areas: 	"header		header"
+							"nav		intro"
+							"faq	articles"
+							"footer		footer";
+	grid-column-gap: 15px;
+	
+}
+
+/*
+body > * { 
+ outline: 2px dashed red; 
+}
+*/
+
+body > nav {grid-area: nav;}
+body > article {grid-area: intro;}
+body > aside {grid-area: faq;}
+body > section {grid-area: articles;}
+body > footer {grid-area: footer;}
+
+body {
+	background-color: #000080;
+	color: #C0C0C0;
+}
+
+
+body > header {
+	grid-row: 1;
+	grid-column: 1/-1;
+}
+
+section {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+/* Navigation */
+
+li a {
+	display: block;
+	width: 100px;
+	background-color: rgb(255, 255, 255);
+	padding: 10px;
+	text-align: center;
+}
+
+nav {
+	font-size: 1em;
+}
+
+nav > ul {
+	line-height: 1em;
+	list-style-type: none;
+	padding-left: 8px;
+}
+
+nav > ul > li > a:link, nav > ul > li > a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+nav > ul > li > a:hover, nav > ul > li > a:active {
+	color: black;
+	text-decoration-line: underline;
+	text-decoration-style: solid;
+}
+
+
+/* H-1/2/3/4/5/6 */
+
+h1.a {
+	font-family: Impact, fantasy;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
