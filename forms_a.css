@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+html {
+	background-color: rgb(5, 126, 206);
+}
+
+textarea { 
+	margin-top: 10px; 
+	height: 100px; 
+	width: 35%; 
+}
