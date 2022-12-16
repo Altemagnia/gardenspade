@@ -1,20 +1,27 @@
 @charset "utf-8";
 
+/* Color */
+
+html {
+	background-color: rgb(5, 126, 206);
+}
+
+
 /* Main before class */
 
 h1{
+	font-family: Impact, fantasy;
 	color: rgb(255, 255, 255);
 	text-align: center;
 }
-
 h1 > a {
-	font-family: Impact, fantasy;
-	font-size: 40px;
 	text-decoration: none;
+	font-size: 40px;
 }
 
 li {
 	float:left;
+	background-color: powderblue;
 }
 
 li > a {
@@ -52,45 +59,10 @@ footer {
 	font-family: Times, Times New Roman, serif;
 	text-align: center;
 }
-/* Color */
-
-html {
-	background-color: rgb(5, 126, 206);
-}
-
-/* Gallery Add-on */
-div.gallery {
-	margin: 5px;
-	border: 1px solid #ccc;
-	float: left;
-	width: 300px;
-}
-
-div.gallery:hover {
-	border: 1.5px solid #777;
-}
-
-div.gallery img {
-	width: 100%;
-	height: auto;
-}
-
-div.desc {
-	font-family: Times, Times New Roman, serif;
-	padding: 15px;
-	text-align: center;
-}
-
-
-
 /* Grid */
 
-.item-c {
-	grid-area: article;
-}
-
-.item-d {
-	grid-area: section;
+.item-b {
+	grid-area: nav;
 }
 
 .item-e {
@@ -103,13 +75,14 @@ div.desc {
 
 .container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: auto;
 	grid-template-areas: 
-		"article article . section "
-		"aside aside . section "
-		"footer footer footer footer";
+		"nav nav"
+		"aside aside"
+		"footer footer";
 	gap: 10px;
 	grid-auto-rows: minmax(100px, auto);
+	grid-auto-columns: minmax(200px, auto);
 	align-items: center;
 }
